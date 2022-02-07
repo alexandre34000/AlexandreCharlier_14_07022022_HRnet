@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# WEALTH HEALTH - Février 2022
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Projet 14** - **_Faites passer une librairie une librairie jQuery vers React_**. 
 
-## Available Scripts
+## Author
 
-In the project directory, you can run:
+- Alexandre Charlier
 
-### `npm start`
+## Technologies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [![made-with-JavaScript](https://img.shields.io/badge/Made%20with-JavaScript-green)](https://shields.io)
+- [![made-with-React](https://img.shields.io/badge/react-v%2017.0.2-blue)](https://fr.reactjs.org/)
+- [![made-with-Redux](https://img.shields.io/badge/redux-v%204.1.2-blue)](https://www.redux.js.org)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Environments
 
-### `npm test`
+https://alexandre34000.github.io/AlexandreCharlier_13_10012022/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Resources provided
 
-### `npm run build`
+* ISSUES (4) :
+https://github.com/OpenClassrooms-Student-Center/P12_Front-end/issues
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Initial internal web application HRnet in jquery :
+https://github.com/OpenClassrooms-Student-Center/P12_Front-end/issues
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+[![npm](https://img.shields.io/badge/npm-v%208.1.3-blue)](https://www.npmjs.com)
+[![NodeJs](https://img.shields.io/badge/NodeJs-v%2016.13.0-yellow)](https://nodejs.org)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installing and launching front-end
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Clone or Fork the repository :
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+`git clone https://github.com/alexandre34000/AlexandreCharlier_14_07022022_HRnet.git
 
-## Learn More
+Inside this front-end repository, install dependencies:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`npm install`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Launch front-end on port 3000:
 
-### Code Splitting
+`npm start`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Front-end is now rendered at URL `http://localhost:3000`.
