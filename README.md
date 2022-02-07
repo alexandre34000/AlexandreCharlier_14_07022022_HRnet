@@ -14,7 +14,7 @@
 
 ## Environments
 
-https://alexandre34000.github.io/AlexandreCharlier_13_10012022/
+https://alexandre34000.github.io/AlexandreCharlier_14_07022022_HRnet/
 
 ## Resources provided
 
