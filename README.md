@@ -1,6 +1,6 @@
 # WEALTH HEALTH - Février 2022
 
-**Projet 14** - **_Faites passer une librairie une librairie jQuery vers React_**. 
+**Projet 14** - **_Faites passer une librairie jQuery vers React_**. 
 
 ## Author
 
