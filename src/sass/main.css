@@ -1,0 +1,108 @@
+@charset "UTF-8";
+/**
+* _variables.scss 1.0 decembre 2021 by Alexandre CHARLIER  
+* Author : Alexandre CHARLIER.
+* GitHub : https://github.com/alexandre34000/AlexandreCharlier_11_16112021
+* Theme Name : sportSee.
+* Description : déclaration des variables pour ce projet.
+* Date: decembre 2021. 
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/*--colors and score WCAG--*/
+/*--links--*/
+/*--font--*/
+/*--font-familly--*/
+/*--media query--*/
+/**
+* _mixins.scss 1.0 novembre 2021 by Alexandre CHARLIER  
+* Author : Alexandre CHARLIER.
+* GitHub : https://github.com/alexandre34000/AlexandreCharlier_11_16112021
+* Theme Name : Kasa.
+* Description : déclaration des mixins pour ce projet.
+* Date: novembre 2021. 
+*/
+/*-- Media query-- */
+/**
+* _bases.scss 1.0 novembre 2021 by Alexandre CHARLIER  
+* Author : Alexandre CHARLIER.
+* GitHub : https://github.com/alexandre34000/AlexandreCharlier_11_16112021
+* Theme Name : Kasa.
+* Description : style de base pour ce projet.
+* Date: novembre 2021. 
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  min-height: 760px; }
+
+body {
+  box-sizing: border-box;
+  margin: 0 auto; }
+
+ul,
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+/**
+* _font.scss 1.0 novembre 2021 by Alexandre CHARLIER  
+* Author : Alexandre CHARLIER.
+* GitHub : https://github.com/alexandre34000/AlexandreCharlier_11_16112021
+* Theme Name : Kasa.
+* Description : style du font pour ce projet.
+* Date: novembre 2021. 
+*/
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Roboto", sans-serif, sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem; }
+
+.App {
+  text-align: center; }
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear; } }
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white; }
+
+.App-link {
+  color: #61dafb; }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
