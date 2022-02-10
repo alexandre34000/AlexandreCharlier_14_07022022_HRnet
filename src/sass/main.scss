@@ -8,8 +8,10 @@
 @import "./utils//variables";
 
 @import "./components/header";
+@import "./components/createTable";
 
 @import "./pages/app";
 @import "./pages/home";
 @import "./pages/createEmpl";
 @import "./pages/listEmpl";
+@import "./pages/notFound";

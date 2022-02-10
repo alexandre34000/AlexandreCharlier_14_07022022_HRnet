@@ -11,13 +11,16 @@ function App() {
     <Router>
       <div className="container-app">
         <Header />
-        <Switch>
-          <Redirect exact from="/" to="/Home" />
-          <Route path="/Home" component={Home} />
-          <Route path="/CreateEmpl" component={CreateEmpl} />
-          <Route path="/ListEmpl" component={ListEmpl} />
-          <Route path='*' component={NotFound} />
-        </Switch>
+        <main>
+          <h1> HRnet</h1>
+          <Switch>
+            <Redirect exact from="/" to="/Home" />
+            <Route path="/Home" component={Home} />
+            <Route path="/CreateEmpl" component={CreateEmpl} />
+            <Route path="/ListEmpl" component={ListEmpl} />
+            <Route path='*' component={NotFound} />
+          </Switch>
+        </main>
         {/*  <Footer /> */}
       </div>
     </Router>
