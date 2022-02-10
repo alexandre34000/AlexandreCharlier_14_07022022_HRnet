@@ -1,24 +1,26 @@
-import logo from '../../logo.svg';
 
+import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import Home from '../Home';
+import CreateEmpl from '../CreateEmp';
+import ListEmpl from '../ListEmp';
+import NotFound from '../NotFound';
+import Header from '../../components/Header';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="container-app">
+        <Header />
+        <Switch>
+          <Redirect exact from="/" to="/Home" />
+          <Route path="/Home" component={Home} />
+          <Route path="/CreateEmpl" component={CreateEmpl} />
+          <Route path="/ListEmpl" component={ListEmpl} />
+          <Route path='*' component={NotFound} />
+        </Switch>
+        {/*  <Footer /> */}
+      </div>
+    </Router>
   );
 }
 

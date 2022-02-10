@@ -24,6 +24,12 @@ https://github.com/OpenClassrooms-Student-Center/P12_Front-end/issues
 * Initial internal web application HRnet in jquery :
 https://github.com/OpenClassrooms-Student-Center/P12_Front-end/issues
 
+* The list of currently used jQuery plugins that need to be converted: 
+https://github.com/xdan/datetimepicker
+https://github.com/kylefox/jquery-modal
+https://github.com/jquery/jquery-ui/blob/main/ui/widgets/selectmenu.js
+https://github.com/DataTables/DataTables
+
 ## Installation 
 
 ### Prerequisites
@@ -35,15 +41,16 @@ https://github.com/OpenClassrooms-Student-Center/P12_Front-end/issues
 ### Installing and launching front-end
 
 Clone or Fork the repository :
-
-`git clone https://github.com/alexandre34000/AlexandreCharlier_14_07022022_HRnet.git
+```bash
+git clone https://github.com/alexandre34000/AlexandreCharlier_14_07022022_HRnet.git
+```
 
 Inside this front-end repository, install dependencies:
-
-`npm install`
-
+```bash
+npm install
+```
 Launch front-end on port 3000:
-
-`npm start`
-
+```bash
+npm start
+```
 Front-end is now rendered at URL `http://localhost:3000`.

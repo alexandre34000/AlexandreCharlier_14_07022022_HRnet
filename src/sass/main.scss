@@ -4,5 +4,12 @@
 @import "./bases/bases";
 @import "./bases/fonts";
 
+@import "./utils/mixins";
+@import "./utils//variables";
 
+@import "./components/header";
+
+@import "./pages/app";
+@import "./pages/home";
 @import "./pages/createEmpl";
+@import "./pages/listEmpl";

@@ -1,0 +1,14 @@
+.header-container{
+    width:100%;
+    height:60px;
+    background-color: burlywood;
+
+    @include tablette {
+        width:120px;
+        min-height:100vh;
+        background-color: burlywood;
+    }
+}
+
+
+
