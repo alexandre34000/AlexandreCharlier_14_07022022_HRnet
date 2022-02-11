@@ -10,17 +10,9 @@ function employe(id, firstName, lastName, dateOfBirth, startDate, departement, s
     this.state = state;
     this.zipCode = zipCode;
 };
-const listOfEmployee = [];
-
-export const mixer = (data) => {
-    data.map((el) => (
-        listOfEmployee.push(toFillList(el))
-    ))
-    return listOfEmployee
-}
 
 const toFillList = (data) => {
-    const adressStreet = data.location.street.number.toString() +" "+ data.location.street.name;
+    const adressStreet = data.location.street.number.toString() + " " + data.location.street.name;
     return new employe(
         data.id.value,
         data.name.first,
@@ -32,4 +24,12 @@ const toFillList = (data) => {
         data.location.state,
         data.location.postcode
     );
+}
+
+export const mixer = (data) => {
+    let listOfEmployee = [];
+    data.map((el) => (
+        listOfEmployee.push(toFillList(el))
+    ))
+    return listOfEmployee
 }

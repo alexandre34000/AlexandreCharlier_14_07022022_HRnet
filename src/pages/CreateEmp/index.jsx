@@ -1,6 +1,18 @@
 import TableRegister from "../../components/TableRegister";
 import {NavLink} from 'react-router-dom';
+import {createUser} from '../../_actions/usersActions';
+import {useDispatch,  useSelector} from 'react-redux'
+import { useEffect } from "react";
+
 const CreateEmpl = () => {
+
+    const dispatch = useDispatch();
+    const arrayOfUsers = useSelector((state)=> state.listUsers)
+
+    const childSubmit =(user) =>{
+        console.log(user)
+      //  dispatch(createUser(arrayOfUsers, user))
+    }
 
     return (
         <div className="container-createEmpl">
@@ -11,7 +23,7 @@ const CreateEmpl = () => {
                 <section className="createEmpl-table__container">
                     <h2>Create Employee</h2>
                     <div className="createEmpl-table__content">
-                    <TableRegister />
+                    <TableRegister childFunction={childSubmit} />
                     </div>
                 </section>
             </div>

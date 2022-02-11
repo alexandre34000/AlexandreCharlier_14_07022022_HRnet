@@ -3,7 +3,8 @@
 const CreateTable= (props) =>{
 
     const handleSubmit=(e)=>{
-        console.log("saved");
+        let data= {test: "ok"}
+        props.childFunction(data)
         // call pluginJquery for open modal
     }
 

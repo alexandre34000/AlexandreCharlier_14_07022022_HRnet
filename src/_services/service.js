@@ -7,7 +7,6 @@ export const getUsersFetch=()=>{
     });
 }
 
-export const createUserFetch =() =>{
-    console.log("function createUser called !");
-
+export const createUserFetch =(user) =>{
+    return user;
 }

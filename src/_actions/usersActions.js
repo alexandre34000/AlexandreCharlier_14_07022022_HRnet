@@ -1,5 +1,5 @@
 import usersConstantes from '../_constantes/usersConstantes';
-import {getUsersFetch} from '../_services/service';
+import {getUsersFetch, createUserFetch} from '../_services/service';
 import {mixer} from '../_helpers/mixer'
 
 const getUsersAction = (userObj) => ({
@@ -24,8 +24,7 @@ export const getUsers = () => dispatch => {
         dispatch(getUsersAction(resultats))
       }
     })
-    .catch((err) => { console.log(err) })
-    
+    .catch((err) => { console.log(err) })   
 }
 
 /**
@@ -33,18 +32,10 @@ export const getUsers = () => dispatch => {
  * @param {<Object>} userInfo {firstName:, lastName:}
  * @returns Promise
  */
-export const createUser = (userInfo) => dispatch => {
-/*   allServices.userService.updateUserProfil(userInfo)
-    .then(data => {
-      if (data.message) {
-        dispatch(updateUser(data.body))
-      } 
-    })
-    .catch((err) => { console.log(err) }) */
-    dispatch(createUserAction())
+export const createUser = (arrayList, user) => dispatch => {
+  var response =createUserFetch(user)
+  arrayList.push(response);
+  dispatch(createUserAction(arrayList))
 }
 
-/* const exportFunction = {
-  getUsers,
-  createUser
-} */
+
