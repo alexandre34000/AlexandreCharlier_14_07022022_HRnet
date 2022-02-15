@@ -18,7 +18,7 @@ export const employee={
         dateOfBirth: "",
         startDate: "",
         state: "",
-        departement: "",
+        department: "",
         street: "",
         zipCode: ""
     }

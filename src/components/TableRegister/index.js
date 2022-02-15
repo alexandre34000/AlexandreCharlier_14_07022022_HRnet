@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { employee } from "../../_helpers/employee";
+/* import { employee } from "../../_helpers/employee"; */
+
 
 
 const CreateTable = (props) => {
-    const [user, setUser] = useState(employee);
+    const [user, setUser] = useState(props.employee);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -18,19 +19,20 @@ const CreateTable = (props) => {
             [name]: value
         }));
     }
+    
 
     return (
         <div>
             <form id="create-employee" onSubmit={handleSubmit}>
                 <label htmlFor="first-name">First Name</label>
-                <input type="text" id="first-name" name="firstName" autoComplete="firstname" placeholder="firstname" onChange={handleChange} />
+                <input type="text" id="first-name" name="firstName" autofocus="on" autoComplete="off" placeholder="firstname" onChange={handleChange} />
 
                 <label htmlFor="last-name">Last Name</label>
-                <input type="text" id="last-name" name="lastName" autoComplete="lastname" placeholder="lastname" onChange={handleChange} />
+                <input type="text" id="last-name" name="lastName" autoComplete="off" placeholder="lastname" onChange={handleChange} />
 
                 {/* called by plugins jquery datetimepicker */}
                 <label htmlFor="date-of-birth">Date of Birth</label>
-                <input id="date-of-birth" type="text" name="dayofbirth" autoComplete="dayofbirth" placeholder="dd/mm/year" onChange={handleChange} />
+                <input id="date-of-birth" type="text" name="dayofbirth" autoComplete="off" placeholder="dd/mm/year" onChange={handleChange} />
 
                 {/* called by plugins jquery datetimepicker */}
                 <label htmlFor="start-date">Start Date</label>
@@ -40,29 +42,29 @@ const CreateTable = (props) => {
                     <legend>Address</legend>
 
                     <label htmlFor="street">Street</label>
-                    <input id="street" type="text" name="street" autoComplete="street" placeholder="street" onChange={handleChange} />
+                    <input id="street" type="text" name="street" autoComplete="off" placeholder="street" onChange={handleChange} />
 
                     <label htmlFor="city">City</label>
-                    <input id="city" type="text" name="city" autoComplete="city" placeholder="city" onChange={handleChange} />
+                    <input id="city" type="text" name="city" autoComplete="off" placeholder="city" onChange={handleChange} />
 
                     <label htmlFor="state">State</label>
-                    <select name="state" id="state" autoComplete="state" placeholder="state" onChange={handleChange}></select>
+                    <select name="state" id="state" autoComplete="off" placeholder="state" onChange={handleChange}>
+                    {props.states.map((dep, i)=><option key={i}>{dep.name}</option>
+                )}
+                    </select>
 
                     <label htmlFor="zip-code">Zip Code</label>
-                    <input id="zip-code" type="number" name="zipcode" autoComplete="zipcode" placeholder="zipcode" onChange={handleChange} />
+                    <input id="zip-code" type="number" name="zipcode" autoComplete="off" placeholder="zipcode" onChange={handleChange} />
                 </fieldset>
 
                 <label htmlFor="department">Department</label>
-                <select name="department" id="department">
-                    <option>Sales</option>
-                    <option>Marketing</option>
-                    <option>Engineering</option>
-                    <option>Human Resources</option>
-                    <option>Legal</option>
+                <select name="department" id="department" className="create-user__select-state" onChange={handleChange}>
+                {props.sales.map((dep, i)=><option key={i}>{dep.name}</option>
+                )}
                 </select>
                 <div className="update-form__section">
                     <input type='submit' value="Save" className="update-form__button" />
-
+                    <input type='reset' value="reset" className="update-form__button" />
                     {/*  <button onClick={props.control} className="update-form__button">Cancel</button> */}
                 </div>
             </form>

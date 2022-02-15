@@ -2,7 +2,9 @@ import TableRegister from "../../components/TableRegister";
 import { createUser } from '../../_actions/usersActions';
 import { useDispatch, useSelector } from 'react-redux'
 import { useState } from "react";
-import Modal from "../../components/Modal"
+import Modal from "../../components/Modal";
+import dataRegister from '../../data/dataRegister';
+import { employee } from "../../_helpers/employee";
 
 const CreateEmpl = () => {
 
@@ -15,6 +17,7 @@ const CreateEmpl = () => {
         setModal(true)
     }
 
+
     return (
         <div className="container-createEmpl">
             <div className="content-createEmpl">
@@ -24,7 +27,7 @@ const CreateEmpl = () => {
                 <section className="createEmpl-table__container">
                     <h2>Create Employee</h2>
                     <div className="createEmpl-table__content">
-                        <TableRegister parentFunction={childSubmit} />
+                        <TableRegister parentFunction={childSubmit} sales={dataRegister.sales} employee={employee} states={dataRegister.states}/>
                     </div>
                 </section>
             </div>
