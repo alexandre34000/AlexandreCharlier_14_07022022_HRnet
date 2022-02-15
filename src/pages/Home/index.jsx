@@ -1,6 +1,14 @@
-
+import {useDispatch,  useSelector} from 'react-redux';
+import { useEffect } from 'react';
+import {getUsers} from '../../_actions/usersActions';
 
 const Home = () => {
+    const dispatch = useDispatch();
+
+    useEffect(()=>{
+        dispatch(getUsers())
+    },[]);
+
 
     return (
         <div className="container-home">

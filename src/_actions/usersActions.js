@@ -30,12 +30,14 @@ export const getUsers = () => dispatch => {
 /**
  *  Update of the user's profile
  * @param {<Object>} userInfo {firstName:, lastName:}
- * @returns Promise
+ * @void Dispatch on action
  */
 export const createUser = (arrayList, user) => dispatch => {
-  var response =createUserFetch(user)
-  arrayList.push(response);
-  dispatch(createUserAction(arrayList))
+  let response =createUserFetch(user);
+  if (response ==="employee created"){
+    arrayList.push(user);
+    dispatch(createUserAction(arrayList))
+  }
 }
 
 

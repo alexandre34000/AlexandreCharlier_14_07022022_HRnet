@@ -8,5 +8,11 @@ export const getUsersFetch=()=>{
 }
 
 export const createUserFetch =(user) =>{
-    return user;
+    return "employee created"
 }
+
+       
+
+   
+ 
+

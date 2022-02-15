@@ -1,17 +1,18 @@
 import TableRegister from "../../components/TableRegister";
-import {NavLink} from 'react-router-dom';
-import {createUser} from '../../_actions/usersActions';
-import {useDispatch,  useSelector} from 'react-redux'
-import { useEffect } from "react";
+import { createUser } from '../../_actions/usersActions';
+import { useDispatch, useSelector } from 'react-redux'
+import { useState } from "react";
+import Modal from "../../components/Modal"
 
 const CreateEmpl = () => {
 
     const dispatch = useDispatch();
-    const arrayOfUsers = useSelector((state)=> state.listUsers)
+    const arrayOfUsers = useSelector((state) => state.listUsers)
+    const [isModal, setModal] = useState(false);
 
-    const childSubmit =(user) =>{
-        console.log(user)
-      //  dispatch(createUser(arrayOfUsers, user))
+    const childSubmit = (user) => {
+        dispatch(createUser(arrayOfUsers, user))
+        setModal(true)
     }
 
     return (
@@ -23,10 +24,14 @@ const CreateEmpl = () => {
                 <section className="createEmpl-table__container">
                     <h2>Create Employee</h2>
                     <div className="createEmpl-table__content">
-                    <TableRegister childFunction={childSubmit} />
+                        <TableRegister parentFunction={childSubmit} />
                     </div>
                 </section>
             </div>
+            {isModal &&
+                <Modal modal={setModal} textButton="Close" textTitle="employee was created succesfully ">
+                </Modal>
+            }
         </div>
     );
 }
