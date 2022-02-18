@@ -1,4 +1,6 @@
 import { useState } from "react";
+import DatePicker from "../DatePicker";
+import Calendar from "../Calendar";
 /* import { employee } from "../../_helpers/employee"; */
 
 
@@ -19,20 +21,21 @@ const CreateTable = (props) => {
             [name]: value
         }));
     }
-    
+
 
     return (
         <div>
             <form id="create-employee" onSubmit={handleSubmit}>
                 <label htmlFor="first-name">First Name</label>
-                <input type="text" id="first-name" name="firstName" autofocus="on" autoComplete="off" placeholder="firstname" onChange={handleChange} />
+                <input type="text" id="first-name" name="firstName" autoFocus="on" autoComplete="off" placeholder="firstname" onChange={handleChange} />
 
                 <label htmlFor="last-name">Last Name</label>
                 <input type="text" id="last-name" name="lastName" autoComplete="off" placeholder="lastname" onChange={handleChange} />
 
                 {/* called by plugins jquery datetimepicker */}
+              
                 <label htmlFor="date-of-birth">Date of Birth</label>
-                <input id="date-of-birth" type="text" name="dayofbirth" autoComplete="off" placeholder="dd/mm/year" onChange={handleChange} />
+                <input id="date-of-birth" type="text" name="dayofbirth" autoComplete="off" placeholder="mm/dd/year" onChange={handleChange} />
 
                 {/* called by plugins jquery datetimepicker */}
                 <label htmlFor="start-date">Start Date</label>
@@ -49,8 +52,8 @@ const CreateTable = (props) => {
 
                     <label htmlFor="state">State</label>
                     <select name="state" id="state" autoComplete="off" placeholder="state" onChange={handleChange}>
-                    {props.states.map((dep, i)=><option key={i}>{dep.name}</option>
-                )}
+                        {props.states.map((dep, i) => <option key={i}>{dep.name}</option>
+                        )}
                     </select>
 
                     <label htmlFor="zip-code">Zip Code</label>
@@ -59,8 +62,8 @@ const CreateTable = (props) => {
 
                 <label htmlFor="department">Department</label>
                 <select name="department" id="department" className="create-user__select-state" onChange={handleChange}>
-                {props.sales.map((dep, i)=><option key={i}>{dep.name}</option>
-                )}
+                    {props.sales.map((dep, i) => <option key={i}>{dep.name}</option>
+                    )}
                 </select>
                 <div className="update-form__section">
                     <input type='submit' value="Save" className="update-form__button" />
@@ -68,6 +71,7 @@ const CreateTable = (props) => {
                     {/*  <button onClick={props.control} className="update-form__button">Cancel</button> */}
                 </div>
             </form>
+            <DatePicker month="April"/>
 
         </div>
     )

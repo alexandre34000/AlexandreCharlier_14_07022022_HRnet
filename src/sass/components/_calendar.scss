@@ -1,0 +1,22 @@
+.calendar-table {
+    width:210px;
+    border-collapse: collapse;
+    background-color: aqua;
+}
+
+th, td{
+    border: 1px solid #333;
+    width:30px;
+    height: 30px;
+    text-align:center;
+
+}
+
+.calendar-tbody{}
+.calendrier-hidden__day{ background-color: grey; color: grey;}
+.calendrier-current__day{
+   background-color: white;
+}
+.calendrier-current__day:hover{
+    background-color:blue;
+}
