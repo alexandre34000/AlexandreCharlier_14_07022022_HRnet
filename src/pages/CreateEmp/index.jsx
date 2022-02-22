@@ -23,11 +23,10 @@ const CreateEmpl = () => {
             <div className="content-createEmpl">
                 <div className="createEmpl-title">
                 </div>
-                {/* <NavLink className="header-content__nav-link" to="/ListEmpl"> View Current Employees</NavLink> */}
                 <section className="createEmpl-table__container">
                     <h2>Create Employee</h2>
                     <div className="createEmpl-table__content">
-                        <TableRegister parentFunction={childSubmit} sales={dataRegister.sales} employee={employee} states={dataRegister.states}/>
+                        <TableRegister modalFunction={childSubmit} sales={dataRegister.sales} employee={employee} states={dataRegister.states} />
                     </div>
                 </section>
             </div>

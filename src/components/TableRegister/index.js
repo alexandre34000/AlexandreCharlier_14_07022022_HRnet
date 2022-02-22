@@ -1,16 +1,18 @@
 import { useState } from "react";
 import DatePicker from "../DatePicker";
-import Calendar from "../Calendar";
-/* import { employee } from "../../_helpers/employee"; */
-
-
 
 const CreateTable = (props) => {
     const [user, setUser] = useState(props.employee);
+    const [isDatapicker, setIsDatapicker] = useState({
+        isShowing: false,
+        posX: "",
+        posY: "",
+        el: "",
+    });
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        props.parentFunction(user);
+        props.modalFunction(user);
     }
 
     const handleChange = (e) => {
@@ -22,6 +24,27 @@ const CreateTable = (props) => {
         }));
     }
 
+    const handleFocus = (e) => {
+        let rect = e.target.getBoundingClientRect();
+        setIsDatapicker((prevState) => ({
+            ...prevState,
+            isShowing: true,
+            posX: rect.bottom,
+            posY: rect.left,
+            el: e.target.name
+        }))
+    }
+
+    const dataFormPicker = (date) => {
+        setUser((prevState) => ({
+            ...prevState,
+            [isDatapicker.el]: date
+        }));
+        setIsDatapicker((prevState) => ({
+            ...prevState,
+            isShowing: false,
+        }));
+    }
 
     return (
         <div>
@@ -32,14 +55,11 @@ const CreateTable = (props) => {
                 <label htmlFor="last-name">Last Name</label>
                 <input type="text" id="last-name" name="lastName" autoComplete="off" placeholder="lastname" onChange={handleChange} />
 
-                {/* called by plugins jquery datetimepicker */}
-              
                 <label htmlFor="date-of-birth">Date of Birth</label>
-                <input id="date-of-birth" type="text" name="dayofbirth" autoComplete="off" placeholder="mm/dd/year" onChange={handleChange} />
+                <input id="date-of-birth" type="text" name="dateOfBirth" autoComplete="off" placeholder="mm/dd/year" value={user.dateOfBirth} onChange={handleChange} onFocus={handleFocus} />
 
-                {/* called by plugins jquery datetimepicker */}
                 <label htmlFor="start-date">Start Date</label>
-                <input id="start-date" type="text" name="startday" placeholder="dd/mm/year" onChange={handleChange} />
+                <input id="start-date" type="text" name="startDate" placeholder="mm/dd/year" value={user.startDate} onChange={handleChange} onFocus={handleFocus} />
 
                 <fieldset className="address">
                     <legend>Address</legend>
@@ -68,11 +88,11 @@ const CreateTable = (props) => {
                 <div className="update-form__section">
                     <input type='submit' value="Save" className="update-form__button" />
                     <input type='reset' value="reset" className="update-form__button" />
-                    {/*  <button onClick={props.control} className="update-form__button">Cancel</button> */}
                 </div>
             </form>
-            <DatePicker month="April"/>
-
+            <div className="createEmpl-datepicker" style={{ display: isDatapicker.isShowing ? "inherit" : "none", top: isDatapicker.posX, left: isDatapicker.posY }}>
+                <DatePicker dataFormPicker={dataFormPicker} dateFormat="mm/dd/yyyy"/>
+            </div>
         </div>
     )
 }

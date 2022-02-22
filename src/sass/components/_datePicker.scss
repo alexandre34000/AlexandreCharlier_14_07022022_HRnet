@@ -1,7 +1,58 @@
-.datepicker-container{
-    
-}
-option[selected]{
-    color:blue;
+.datepicker-container {
+    width: 220px;
+    height: auto;
+    border: 1px solid $border-color-greylight;
+    background-color: white;
+    box-shadow: 0 5px 15px -5px rgb(0, 0, 51);
 }
 
+.datepicker-content {
+    width: 100%;
+}
+
+.datepicker-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 30px;
+}
+
+.datepicker-icons {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-color: white;
+    transition: all .2s ease-in-out;
+    border: none;
+}
+
+.icon__currentDay {
+    background-image: url('../../public/icons/date-today.png');
+    background-size: 82%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.icon__before {
+    background-image: url('../../public/icons/arrow-before.png');
+    background-size: cover;
+}
+
+.icon__next {
+    background-image: url('../../public/icons/arrow-next.png');
+    background-size: cover;
+}
+
+.datepicker-icons:hover {
+    color: black;
+    transform: scale(1.2);
+}
+
+.datepicker-select {
+    border: none;
+}
+
+option[selected] {
+    color: blue;
+}

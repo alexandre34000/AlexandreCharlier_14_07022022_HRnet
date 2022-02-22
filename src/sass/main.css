@@ -11,6 +11,7 @@
 /*--colors and score WCAG--*/
 /*--links--*/
 /*--font--*/
+/* --border-- */
 /*--font-familly--*/
 /*--media query--*/
 /**
@@ -104,6 +105,7 @@ h2 {
 /*--colors and score WCAG--*/
 /*--links--*/
 /*--font--*/
+/* --border-- */
 /*--font-familly--*/
 /*--media query--*/
 .header-container {
@@ -179,26 +181,77 @@ label {
   background-size: contain;
   cursor: pointer; }
 
+.datepicker-container {
+  width: 220px;
+  height: auto;
+  border: 1px solid #ccc;
+  background-color: white;
+  box-shadow: 0 5px 15px -5px #000033; }
+
+.datepicker-content {
+  width: 100%; }
+
+.datepicker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 30px; }
+
+.datepicker-icons {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-color: white;
+  transition: all .2s ease-in-out;
+  border: none; }
+
+.icon__currentDay {
+  background-image: url("../../public/icons/date-today.png");
+  background-size: 82%;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.icon__before {
+  background-image: url("../../public/icons/arrow-before.png");
+  background-size: cover; }
+
+.icon__next {
+  background-image: url("../../public/icons/arrow-next.png");
+  background-size: cover; }
+
+.datepicker-icons:hover {
+  color: black;
+  transform: scale(1.2); }
+
+.datepicker-select {
+  border: none; }
+
 option[selected] {
   color: blue; }
 
-.calendar-table {
-  width: 210px;
-  border-collapse: collapse;
-  background-color: aqua; }
+.calendar-container {
+  width: 100%;
+  padding: 5px; }
 
-th, td {
-  border: 1px solid #333;
-  width: 30px;
-  height: 30px;
-  text-align: center; }
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px; }
+
+th,
+td {
+  width: 14.2857142%;
+  height: 25px;
+  border: 1px solid #ccc;
+  text-align: center;
+  background-color: #f5f5f5; }
 
 .calendrier-hidden__day {
-  background-color: grey;
-  color: grey; }
+  background-color: #fff;
+  color: #fff; }
 
 .calendrier-current__day {
-  background-color: white; }
+  background-color: #f5f5f5; }
 
 .calendrier-current__day:hover {
   background-color: blue; }
@@ -230,3 +283,18 @@ th, td {
   width: 250px;
   margin-left: auto;
   margin-right: auto; }
+
+.table-icon__calendar {
+  width: 20px;
+  height: 20px;
+  background-image: url("../../public/icons/calendar.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  border: none;
+  cursor: pointer; }
+
+.createEmpl-datepicker {
+  display: none;
+  position: absolute; }

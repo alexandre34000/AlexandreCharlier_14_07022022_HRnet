@@ -1,6 +1,4 @@
 
-import { useState, useEffect, ChangeEvent, FormEvent } from 'react';
-
 const RenderHeader = (props) => {
     return props.elt.map((el, index) => {
         return <th key={index}>{el}</th>
@@ -9,7 +7,7 @@ const RenderHeader = (props) => {
 
 const RenderBody = (props) => {
     return <tr onClick={props.event} >{props.bodyElt.map((el, i) => {
-        return <td className={(( el > 0) ? "calendrier-current__day" : "calendrier-hidden__day")} value={el} key={i}>{el}</td>
+        return <td className={((el > 0) ? "calendrier-current__day" : "calendrier-hidden__day")} value={el} key={i}>{el}</td>
     })}</tr>
 }
 
@@ -33,17 +31,16 @@ const buildArrayOfDays = (items, firstDay, lastDay, nbRows) => {
     return arrayInit;
 }
 
-
-const Calendar = () => {
-    let month = 7;
-    let year = 2022;
+const Calendar = (props) => {
+    let month = props.month;
+    let year = props.year;
     let nbColonne = 7;
-    let headerElement = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
+    let headerElement = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
     const handleChange = (e) => {
-        if (e.target.childNodes[0].data >0){
-        console.log(e.target.childNodes[0].data)
-    }
+        if (e.target.childNodes[0].data > 0) {
+            props.formDate(e.target.childNodes[0].data)
+        }
     }
 
     const getDaysInMonth = (month, year) => {
@@ -54,34 +51,20 @@ const Calendar = () => {
         let correctif = month - 1;
         return new Date(year, correctif, 1);
     }
-    const getLastDayOnMonth = (month, year) => {
-        return new Date(year, month, 0);
-    }
-
-    const getDayOfWeek = (month, year) => {
-        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-        return days[getFirstDayOnMonth(month, year).getDay()];
-    }
-    const getMonthName = (month) => {
-        var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-        return months[month - 1]
-    }
 
     const getNbOfRows = (firstDay, nbOfMonthDays) => {
         let nbOfRows = (nbOfMonthDays + firstDay) / 7;
         return Math.ceil(nbOfRows)
     }
 
-
     let nbRows = getNbOfRows(getFirstDayOnMonth(month, year).getDay(), getDaysInMonth(month, year));
     let nbItems = nbColonne * nbRows;
     let firstDay = getFirstDayOnMonth(month, year).getDay();
-    let lastDay = getLastDayOnMonth(month, year).getDay();
     let nbDaysOfMonth = getDaysInMonth(month, year);
-    const initArray = buildArrayOfDays(nbItems, firstDay, nbDaysOfMonth, nbRows);
+    let initArray = buildArrayOfDays(nbItems, firstDay, nbDaysOfMonth, nbRows);
 
     return (
-        <div>
+        <div className="calendar-container">
             <table className="calendar-table">
                 <thead><tr>
                     <RenderHeader elt={headerElement} />
@@ -92,12 +75,25 @@ const Calendar = () => {
                     )}
                 </tbody>
             </table>
-
         </div>
     )
 }
 
 export default Calendar;
+//let lastDay = getLastDayOnMonth(month, year).getDay();
+
+/*  const getLastDayOnMonth = (month, year) => {
+        return new Date(year, month, 0);
+    }
+
+    const getDayOfWeek = (month, year) => {
+        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        return days[getFirstDayOnMonth(month, year).getDay()];
+    } */
+/*  const getMonthName = (month) => {
+     var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+     return months[month - 1]
+ } */
 
  //const build = buildArrayOfDay(nbItems, firstDay, nbDaysOfMonth, nbRows)
     // console.log(build)
