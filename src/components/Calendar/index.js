@@ -1,13 +1,13 @@
 
 const RenderHeader = (props) => {
     return props.elt.map((el, index) => {
-        return <th key={index}>{el}</th>
+        return <th className="calendar-th" key={index}>{el}</th>
     })
 }
 
 const RenderBody = (props) => {
     return <tr onClick={props.event} >{props.bodyElt.map((el, i) => {
-        return <td className={((el > 0) ? "calendrier-current__day" : "calendrier-hidden__day")} value={el} key={i}>{el}</td>
+        return <td className={((el > 0) ? "calendrier-current__day" : "calendrier-hidden__day") +" calendar-td"} value={el} key={i}>{el}</td>
     })}</tr>
 }
 

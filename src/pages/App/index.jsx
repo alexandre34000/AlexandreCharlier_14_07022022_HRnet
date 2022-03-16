@@ -5,6 +5,7 @@ import CreateEmpl from '../CreateEmp';
 import ListEmpl from '../ListEmp';
 import NotFound from '../NotFound';
 import Header from '../../components/Header';
+import Title from '../../components/Title';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <div className="container-app">
         <Header />
         <main>
-          <h1> HRnet</h1>
+          <h1 className="sr-only"> HRnet, application de gestion des ressources humaines</h1>
           <Switch>
             <Redirect exact from="/" to="/Home" />
             <Route path="/Home" component={Home} />

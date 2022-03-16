@@ -35,63 +35,72 @@ const CreateTable = (props) => {
         }))
     }
 
+    const handleFocusInput = ()=>{
+        if(isDatapicker.isShowing === true){
+           setIsDatapicker((prevState) => ({
+            ...prevState,
+            isShowing: false,
+            }))
+        }
+    }
+
     const dataFormPicker = (date) => {
         setUser((prevState) => ({
             ...prevState,
             [isDatapicker.el]: date
         }));
+        document.querySelector(`input[name='${isDatapicker.el}']`).focus();
         setIsDatapicker((prevState) => ({
             ...prevState,
             isShowing: false,
-        }));
+        }));    
     }
 
     return (
-        <div>
-            <form id="create-employee" onSubmit={handleSubmit}>
-                <label htmlFor="first-name">First Name</label>
-                <input type="text" id="first-name" name="firstName" autoFocus="on" autoComplete="off" placeholder="firstname" onChange={handleChange} />
+        <div className="table-register__container">
+            <form className="table-register__container-form" id="create-employee" onSubmit={handleSubmit}>
+                <label className="table-register__form-label" htmlFor="first-name">First Name</label>
+                <input className="table-register__form-input" type="text" id="first-name" name="firstName" autoFocus="on" autoComplete="off" placeholder="firstname" onChange={handleChange} onFocus={handleFocusInput} />
 
-                <label htmlFor="last-name">Last Name</label>
-                <input type="text" id="last-name" name="lastName" autoComplete="off" placeholder="lastname" onChange={handleChange} />
+                <label className="table-register__form-label" htmlFor="last-name">Last Name</label>
+                <input className="table-register__form-input" type="text" id="last-name" name="lastName" autoComplete="off" placeholder="lastname" onChange={handleChange} onFocus={handleFocusInput} />
 
-                <label htmlFor="date-of-birth">Date of Birth</label>
-                <input id="date-of-birth" type="text" name="dateOfBirth" autoComplete="off" placeholder="mm/dd/year" value={user.dateOfBirth} onChange={handleChange} onFocus={handleFocus} />
+                <label className="table-register__form-label" htmlFor="date-of-birth">Date of Birth</label>
+                <input className="table-register__form-input" id="date-of-birth" type="text" name="dateOfBirth" autoComplete="off" placeholder="mm/dd/year" value={user.dateOfBirth} onChange={handleChange} onFocus={handleFocus} />
 
-                <label htmlFor="start-date">Start Date</label>
-                <input id="start-date" type="text" name="startDate" placeholder="mm/dd/year" value={user.startDate} onChange={handleChange} onFocus={handleFocus} />
+                <label className="table-register__form-label" htmlFor="start-date">Start Date</label>
+                <input className="table-register__form-input" id="start-date" type="text" name="startDate" placeholder="mm/dd/year" value={user.startDate} onChange={handleChange} onFocus={handleFocus} />
 
-                <fieldset className="address">
-                    <legend>Address</legend>
+                <fieldset className="table-register__address-content">
+                    <legend className="table-register__form-label" >Address</legend>
 
-                    <label htmlFor="street">Street</label>
-                    <input id="street" type="text" name="street" autoComplete="off" placeholder="street" onChange={handleChange} />
+                    <label className="table-register__adress-label" htmlFor="street">Street</label>
+                    <input className="table-register__adress-input" id="street" type="text" name="street" autoComplete="off" placeholder="street" onChange={handleChange} onFocus={handleFocusInput}/>
 
-                    <label htmlFor="city">City</label>
-                    <input id="city" type="text" name="city" autoComplete="off" placeholder="city" onChange={handleChange} />
+                    <label className="table-register__adress-label" htmlFor="city">City</label>
+                    <input className="table-register__adress-input" id="city" type="text" name="city" autoComplete="off" placeholder="city" onChange={handleChange} onFocus={handleFocusInput} />
 
-                    <label htmlFor="state">State</label>
-                    <select name="state" id="state" autoComplete="off" placeholder="state" onChange={handleChange}>
+                    <label className="table-register__adress-label" htmlFor="state">State</label>
+                    <select className="table-register__form-select" name="state" id="state" autoComplete="off" placeholder="state" onChange={handleChange} onFocus={handleFocusInput}>
                         {props.states.map((dep, i) => <option key={i}>{dep.name}</option>
                         )}
                     </select>
 
-                    <label htmlFor="zip-code">Zip Code</label>
-                    <input id="zip-code" type="number" name="zipcode" autoComplete="off" placeholder="zipcode" onChange={handleChange} />
+                    <label className="table-register__adress-label" htmlFor="zip-code">Zip Code</label>
+                    <input className="table-register__adress-input" id="zip-code" type="number" name="zipcode" autoComplete="off" placeholder="zipcode" onChange={handleChange} onFocus={handleFocusInput}/>
                 </fieldset>
 
-                <label htmlFor="department">Department</label>
-                <select name="department" id="department" className="create-user__select-state" onChange={handleChange}>
-                    {props.sales.map((dep, i) => <option key={i}>{dep.name}</option>
+                <label className="table-register__form-label" htmlFor="department">Department</label>
+                <select className="table-register__form-select" name="department" id="department" onChange={handleChange}>
+                    {props.sales.map((dep, i) => <option  key={i}>{dep.name}</option>
                     )}
                 </select>
-                <div className="update-form__section">
-                    <input type='submit' value="Save" className="update-form__button" />
-                    <input type='reset' value="reset" className="update-form__button" />
+                <div className="table-register__bottom">
+                    <input type='submit' value="Save" className="table-register__bottom-button" />
                 </div>
             </form>
             <div className="createEmpl-datepicker" style={{ display: isDatapicker.isShowing ? "inherit" : "none", top: isDatapicker.posX, left: isDatapicker.posY }}>
-                <DatePicker dataFormPicker={dataFormPicker} dateFormat="mm/dd/yyyy"/>
+                <DatePicker dataFormPicker={dataFormPicker} dateFormat="mm/dd/yyyy" display={setIsDatapicker}/>
             </div>
         </div>
     )

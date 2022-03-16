@@ -31,7 +31,6 @@
 * Description : style de base pour ce projet.
 * Date: novembre 2021. 
 */
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 *,
 *::after,
 *::before {
@@ -45,6 +44,13 @@ html {
 body {
   box-sizing: border-box;
   margin: 0 auto; }
+
+main {
+  width: 100%; }
+
+@media screen and (min-width: 769px) {
+  main {
+    width: 100%; } }
 
 ul,
 li {
@@ -85,35 +91,15 @@ h1 {
 h2 {
   font-size: 5rem; }
 
-/**
-* _mixins.scss 1.0 novembre 2021 by Alexandre CHARLIER  
-* Author : Alexandre CHARLIER.
-* GitHub : https://github.com/alexandre34000/AlexandreCharlier_11_16112021
-* Theme Name : Kasa.
-* Description : déclaration des mixins pour ce projet.
-* Date: novembre 2021. 
-*/
-/*-- Media query-- */
-/**
-* _variables.scss 1.0 decembre 2021 by Alexandre CHARLIER  
-* Author : Alexandre CHARLIER.
-* GitHub : https://github.com/alexandre34000/AlexandreCharlier_11_16112021
-* Theme Name : sportSee.
-* Description : déclaration des variables pour ce projet.
-* Date: decembre 2021. 
-*/
-/*--colors and score WCAG--*/
-/*--links--*/
-/*--font--*/
-/* --border-- */
-/*--font-familly--*/
-/*--media query--*/
+h3 {
+  font-size: 2rem; }
+
 .header-container {
   width: 100%;
   height: 60px;
   background-color: burlywood; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .header-container {
     width: 120px;
     min-height: 100vh;
@@ -238,8 +224,8 @@ option[selected] {
   border-collapse: collapse;
   font-size: 10px; }
 
-th,
-td {
+.calendar-th,
+.calendar-td {
   width: 14.2857142%;
   height: 25px;
   border: 1px solid #ccc;
@@ -254,35 +240,102 @@ td {
   background-color: #f5f5f5; }
 
 .calendrier-current__day:hover {
-  background-color: blue; }
+  background-color: black;
+  color: white; }
+
+.title-container-head {
+  padding: 30px;
+  text-align: center;
+  background-color: white; }
+
+.title-content-head {
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 0 auto;
+  background-color: #6a6ad4;
+  color: white; }
+
+.title-content-head-h2 {
+  font-style: oblique; }
+
+.title-content-head-texte {
+  font-size: 18px; }
+
+.table-register__form-label {
+  font-size: 16px;
+  margin: 15px 0 5px 0; }
+
+.table-register__form-input,
+.table-register__adress-input,
+.table-register__form-select {
+  width: 200px;
+  height: 23px;
+  font-size: 14px;
+  border-radius: 3px;
+  border: 1.5px solid grey; }
+
+.table-register__address-content {
+  margin-top: 10px;
+  padding-bottom: 20px;
+  border-radius: 5px; }
+
+.table-register__adress-label {
+  font-size: 14px;
+  margin: 10px 0 5px 0; }
+
+.table-register__bottom {
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-around; }
+
+.table-register__bottom-button {
+  width: 80px;
+  height: 25px;
+  cursor: pointer; }
 
 .container-app {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  min-height: 100vh;
-  background-color: greenyellow; }
+  min-width: 100%;
+  min-height: 100vh; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .container-app {
     flex-direction: row; } }
 
-.container-home {
+.container-home__presentation {
   width: 100%;
-  height: 90vh;
-  background-color: aqua; }
+  height: 90vh; }
 
-@media screen and (min-width: 768px) {
-  .container-home {
+@media screen and (min-width: 769px) {
+  .container-home__presentation {
     height: 100vh; } }
 
 .container-createEmpl {
   width: 100%; }
 
+.createEmpl-title {
+  color: white;
+  padding: 15px 0; }
+
+.createEmpl-table__container {
+  margin: 0 30px;
+  background-color: #6a6ad4;
+  border-radius: 20px;
+  text-align: center;
+  padding: 0 20px 20px 20px; }
+
 .createEmpl-table__content {
-  width: 250px;
+  width: 350px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 0 15px; }
 
 .table-icon__calendar {
   width: 20px;
@@ -298,3 +351,19 @@ td {
 .createEmpl-datepicker {
   display: none;
   position: absolute; }
+
+.employee-table__content {
+  margin: 0 30px;
+  background-color: #6a6ad4;
+  border-radius: 20px;
+  text-align: center;
+  padding: 0 20px 20px 20px; }
+
+.employee-table__content-title {
+  padding: 10px 0;
+  color: white; }
+
+.employee-table__content-table {
+  overflow: hidden;
+  background-color: white;
+  border-radius: 20px; }

@@ -2,12 +2,13 @@
 .container-app{
     display: flex;
     flex-direction: column;
-    width:100%;
+    min-width:100%;
     min-height:100vh;
-    background-color: greenyellow;
-
+    
     @include tablette{
         flex-direction: row;
     }
 }
+
+
 

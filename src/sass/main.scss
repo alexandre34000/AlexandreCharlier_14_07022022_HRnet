@@ -4,14 +4,13 @@
 @import "./bases/bases";
 @import "./bases/fonts";
 
-@import "./utils/mixins";
-@import "./utils//variables";
-
 @import "./components/header";
 @import "./components/createTable";
 @import "./components/modal";
 @import "./components/datePicker";
 @import "./components/calendar";
+@import "./components/title";
+@import "./components/tableRegister";
 
 @import "./pages/app";
 @import "./pages/home";

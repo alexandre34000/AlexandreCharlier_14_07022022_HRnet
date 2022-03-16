@@ -1,6 +1,7 @@
-import {useDispatch,  useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import { useEffect } from 'react';
 import {getUsers} from '../../_actions/usersActions';
+import Title from '../../components/Title';
 
 const Home = () => {
     const dispatch = useDispatch();
@@ -9,10 +10,10 @@ const Home = () => {
         dispatch(getUsers())
     },[]);
 
-
+const subtitle= "Application pour le gestion des ressources humaines";
     return (
-        <div className="container-home">
-            <h2> phrase de presentation et de bienvenue</h2>
+        <div className="container-home__presentation">
+            <Title height="500px" subTitle={subtitle}/>
         </div>
     );
 }

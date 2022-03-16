@@ -1,0 +1,37 @@
+.table-register__form-label {
+    font-size: 16px;
+    margin: 15px 0 5px 0;
+}
+
+.table-register__form-input,
+.table-register__adress-input,
+.table-register__form-select {
+    width: 200px;
+    height: 23px;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 1.5px solid grey;
+}
+
+.table-register__address-content {
+    margin-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+}
+
+.table-register__adress-label {
+    font-size: 14px;
+    margin: 10px 0 5px 0;
+}
+
+.table-register__bottom {
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.table-register__bottom-button {
+    width: 80px;
+    height: 25px;
+    cursor: pointer;
+}

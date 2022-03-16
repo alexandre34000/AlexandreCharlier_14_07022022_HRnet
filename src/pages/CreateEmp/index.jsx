@@ -5,6 +5,7 @@ import { useState } from "react";
 import Modal from "../../components/Modal";
 import dataRegister from '../../data/dataRegister';
 import { employee } from "../../_helpers/employee";
+import Title from "../../components/Title";
 
 const CreateEmpl = () => {
 
@@ -17,14 +18,14 @@ const CreateEmpl = () => {
         setModal(true)
     }
 
+    const subtitle ="Logiciel de gestion des ressources humaines"
 
     return (
         <div className="container-createEmpl">
             <div className="content-createEmpl">
-                <div className="createEmpl-title">
-                </div>
+                <Title height="auto"  subTitle={subtitle}/>
                 <section className="createEmpl-table__container">
-                    <h2>Create Employee</h2>
+                    <h3 className="createEmpl-title">Creation of an employee card</h3>
                     <div className="createEmpl-table__content">
                         <TableRegister modalFunction={childSubmit} sales={dataRegister.sales} employee={employee} states={dataRegister.states} />
                     </div>
