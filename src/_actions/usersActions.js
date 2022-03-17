@@ -35,7 +35,6 @@ export const getUsers = () => dispatch => {
 export const createUser = (arrayList, user) => dispatch => {
   let response =createUserFetch(user);
   if (response ==="employee created"){
-    console.log(user)
     arrayList.push(user);
     dispatch(createUserAction(arrayList))
   }

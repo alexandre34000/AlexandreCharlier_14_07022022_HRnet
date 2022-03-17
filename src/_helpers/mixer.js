@@ -23,6 +23,5 @@ export const mixer = (data) => {
     data.map((el) => (
         listOfEmployee.push(toFillList(el))
     ))
-    console.log(listOfEmployee)
     return listOfEmployee
 }
