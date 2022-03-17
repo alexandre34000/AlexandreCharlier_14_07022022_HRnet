@@ -5,7 +5,6 @@ import CreateEmpl from '../CreateEmp';
 import ListEmpl from '../ListEmp';
 import NotFound from '../NotFound';
 import Header from '../../components/Header';
-import Title from '../../components/Title';
 
 function App() {
   return (
@@ -22,7 +21,6 @@ function App() {
             <Route path='*' component={NotFound} />
           </Switch>
         </main>
-        {/*  <Footer /> */}
       </div>
     </Router>
   );

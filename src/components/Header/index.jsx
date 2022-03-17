@@ -1,5 +1,3 @@
-
-
 import { NavLink } from 'react-router-dom';
 
 
@@ -8,13 +6,12 @@ const Header = ()=>{
       <header className="header-container">
         <div className="header-content">
           <div className="header-content__logo" aria-hidden="true">
-            {/* <img className="header-content__logo-img" src={logoKasa}  alt="logo de kasa"  /> */}
           </div>
           <nav className="header-content__nav">
             <ul className="header-content__ul">
-              <li><NavLink className="header-content__nav-link" to="/Home"> Accueil </NavLink></li>
-              <li><NavLink className="header-content__nav-link" to="/CreateEmpl"> Création d'un profil' </NavLink></li>
-              <li><NavLink className="header-content__nav-link" to="/ListEmpl"> Liste des employées </NavLink></li>
+              <li><NavLink className="header-content__nav-link" to="/Home"><img className= "header-content__nav-link_icons"alt="home" src={process.env.PUBLIC_URL + '/icons/home.png'}/></NavLink></li>
+              <li><NavLink className="header-content__nav-link" to="/CreateEmpl"><img className= "header-content__nav-link_icons"alt="home" src={process.env.PUBLIC_URL + '/icons/useradd.png'}/></NavLink></li>
+              <li><NavLink className="header-content__nav-link" to="/ListEmpl"><img className= "header-content__nav-link_icons"alt="home" src={process.env.PUBLIC_URL + '/icons/usersearch.png'}/></NavLink></li>
             </ul>
           </nav>
         </div>

@@ -40,5 +40,3 @@ export const createUser = (arrayList, user) => dispatch => {
     dispatch(createUserAction(arrayList))
   }
 }
-
-

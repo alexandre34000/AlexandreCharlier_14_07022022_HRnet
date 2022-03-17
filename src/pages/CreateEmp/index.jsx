@@ -23,7 +23,7 @@ const CreateEmpl = () => {
     return (
         <div className="container-createEmpl">
             <div className="content-createEmpl">
-                <Title height="auto"  subTitle={subtitle}/>
+                <Title  subTitle={subtitle}/>
                 <section className="createEmpl-table__container">
                     <h3 className="createEmpl-title">Creation of an employee card</h3>
                     <div className="createEmpl-table__content">

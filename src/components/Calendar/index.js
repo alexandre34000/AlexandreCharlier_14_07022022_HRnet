@@ -80,27 +80,3 @@ const Calendar = (props) => {
 }
 
 export default Calendar;
-//let lastDay = getLastDayOnMonth(month, year).getDay();
-
-/*  const getLastDayOnMonth = (month, year) => {
-        return new Date(year, month, 0);
-    }
-
-    const getDayOfWeek = (month, year) => {
-        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-        return days[getFirstDayOnMonth(month, year).getDay()];
-    } */
-/*  const getMonthName = (month) => {
-     var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-     return months[month - 1]
- } */
-
- //const build = buildArrayOfDay(nbItems, firstDay, nbDaysOfMonth, nbRows)
-    // console.log(build)
-/* console.log("le nombre de jours dans le mois n° 2  est :" + getDaysInMonth(month, year))
-console.log("le premier fevrier est un  " + getDayOfWeek(month, year));
-console.log(" le mois n° 2 est le mois de : " + getMonthName(month))
-console.log("le numero du premier jour du mois de fevrier est : 0 = dimanche " + getFirstDayOnMonth(month, year).getDay())
-console.log("le dernier jour du mois de fevrier est : 0 = dimanche " + getLastDayOnMonth(month, year).getDay()) */
-
-/* console.log("le nombre de ligne est : " + rows) */

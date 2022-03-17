@@ -1,8 +1,12 @@
 {
   "name": "hrnet",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "homepage": "https://alexandre34000.github.io/AlexandreCharlier_14_07022022_HRnet",
+  "homepage": "https://alexandre34000.github.io/AlexandreCharlier_14_07022022_HRnet/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandre34000/AlexandreCharlier_14_07022022_HRnet.git"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",

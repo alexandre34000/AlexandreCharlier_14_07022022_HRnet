@@ -3,17 +3,6 @@ import { employee } from './employee'
 
 const toFillList = (data) => {
     const adressStreet = data.location.street.number.toString() + " " + data.location.street.name;
-     /* return new employee(
-         data.id.value,
-         data.name.first,
-         data.name.last,
-         data.dob.date,
-         data.registered.date,
-         data.id.name,
-         adressStreet,
-         data.location.state,
-         data.location.postcode
-     ); */
 
     return {
         ...employee,

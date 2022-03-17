@@ -13,7 +13,7 @@ const Home = () => {
 const subtitle= "Application pour le gestion des ressources humaines";
     return (
         <div className="container-home__presentation">
-            <Title height="500px" subTitle={subtitle}/>
+            <Title  subTitle={subtitle}/>
         </div>
     );
 }

@@ -1,19 +1,25 @@
+.container-employee-table {
+    height: 100vh;
+}
 
-.employee-table__content{
+.employee-table__content {
     margin: 0 30px;
-    background-color: rgb(106, 106, 212);
+    background-color: $background-blue;
     border-radius: 20px;
-    text-align:center;
-    padding:0 20px 20px 20px;
+    text-align: center;
+    padding: 0 20px 20px 20px;
+    height: 82vh;
+    overflow: auto;
 }
 
-.employee-table__content-title{
+.employee-table__content-title {
     padding: 10px 0;
- color:white;
+    color: white;
 }
-.employee-table__content-table{
+
+.employee-table__content-table {
 
     overflow: hidden;
-    background-color:white;
+    background-color: white;
     border-radius: 20px;
 }
