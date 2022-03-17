@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/AlexandreCharlier_14_07022002_HRnet/static/css/main.7c4f694e.css",
-    "main.js": "/AlexandreCharlier_14_07022002_HRnet/static/js/main.49e40e21.js",
-    "static/js/787.a603b31f.chunk.js": "/AlexandreCharlier_14_07022002_HRnet/static/js/787.a603b31f.chunk.js",
-    "index.html": "/AlexandreCharlier_14_07022002_HRnet/index.html",
-    "main.7c4f694e.css.map": "/AlexandreCharlier_14_07022002_HRnet/static/css/main.7c4f694e.css.map",
-    "main.49e40e21.js.map": "/AlexandreCharlier_14_07022002_HRnet/static/js/main.49e40e21.js.map",
-    "787.a603b31f.chunk.js.map": "/AlexandreCharlier_14_07022002_HRnet/static/js/787.a603b31f.chunk.js.map"
+    "main.css": "/AlexandreCharlier_14_07022022_HRnet/static/css/main.7c4f694e.css",
+    "main.js": "/AlexandreCharlier_14_07022022_HRnet/static/js/main.66899c89.js",
+    "static/js/787.a603b31f.chunk.js": "/AlexandreCharlier_14_07022022_HRnet/static/js/787.a603b31f.chunk.js",
+    "index.html": "/AlexandreCharlier_14_07022022_HRnet/index.html",
+    "main.7c4f694e.css.map": "/AlexandreCharlier_14_07022022_HRnet/static/css/main.7c4f694e.css.map",
+    "main.66899c89.js.map": "/AlexandreCharlier_14_07022022_HRnet/static/js/main.66899c89.js.map",
+    "787.a603b31f.chunk.js.map": "/AlexandreCharlier_14_07022022_HRnet/static/js/787.a603b31f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7c4f694e.css",
-    "static/js/main.49e40e21.js"
+    "static/js/main.66899c89.js"
   ]
 }
