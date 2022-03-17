@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alexandre34000.github.io/AlexandreCharlier_7_19072021/sitemap.xml
+Sitemap: https://alexandre34000.github.io/AlexandreCharlier_14_07022022/sitemap.xml
