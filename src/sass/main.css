@@ -47,10 +47,9 @@ body {
 
 main {
   width: 100%; }
-
-@media screen and (min-width: 769px) {
-  main {
-    width: 100%; } }
+  @media screen and (min-width: 769px) {
+    main {
+      width: 100%; } }
 
 ul,
 li {
@@ -98,13 +97,12 @@ h3 {
   width: 100%;
   height: 60px;
   background-color: #2e60d3; }
-
-@media screen and (min-width: 769px) {
-  .header-container {
-    width: 120px;
-    height: 100vh;
-    border-radius: 20px 0 20px 20px;
-    border: none; } }
+  @media screen and (min-width: 769px) {
+    .header-container {
+      width: 120px;
+      height: 100vh;
+      border-radius: 20px 0 20px 20px;
+      border: none; } }
 
 .header-content__ul {
   display: flex;
@@ -112,11 +110,10 @@ h3 {
   height: 100%;
   justify-content: space-around;
   align-items: center; }
-
-@media screen and (min-width: 769px) {
-  .header-content__ul {
-    flex-direction: column;
-    height: 300px; } }
+  @media screen and (min-width: 769px) {
+    .header-content__ul {
+      flex-direction: column;
+      height: 300px; } }
 
 .header-content__nav-link_icons {
   width: 40px;
@@ -125,11 +122,10 @@ h3 {
   border-radius: 50%;
   padding: 6px;
   margin: 10px; }
-
-@media screen and (min-width: 769px) {
-  .header-content__nav-link_icons {
-    width: 60px;
-    height: 60px; } }
+  @media screen and (min-width: 769px) {
+    .header-content__nav-link_icons {
+      width: 60px;
+      height: 60px; } }
 
 label {
   display: block;
@@ -326,18 +322,16 @@ option[selected] {
   flex-direction: column;
   min-width: 100%;
   height: 100%; }
-
-@media screen and (min-width: 769px) {
-  .container-app {
-    flex-direction: row; } }
+  @media screen and (min-width: 769px) {
+    .container-app {
+      flex-direction: row; } }
 
 .container-home__presentation {
   width: 100%;
   height: 90vh; }
-
-@media screen and (min-width: 769px) {
-  .container-home__presentation {
-    height: 100vh; } }
+  @media screen and (min-width: 769px) {
+    .container-home__presentation {
+      height: 100vh; } }
 
 .container-createEmpl {
   width: 100%;
