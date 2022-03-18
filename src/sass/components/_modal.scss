@@ -1,0 +1,63 @@
+.modal-container {
+    opacity: 1;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.75);
+    animation-name: fadeInOpacity;
+    animation-duration: 1s;
+    animation-fill-mode: forward;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    position: relative;
+    font-size: 2rem;
+    padding: 10px 40px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.modal-content__center {
+    text-align: center;
+}
+
+.modal-button__lower,
+.modal-button__upper {
+    display: none;
+}
+
+.modal-button__lower[data-buttonlower="true"] {
+    display: initial;
+    margin-top: 15px;
+    padding: 2px 15px;
+    cursor: pointer;
+}
+
+.modal-button__upper[data-buttonupper="true"] {
+    display: initial;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background-image: url('/public/icons/cancel.png');
+    background-size: contain;
+    cursor: pointer;
+}

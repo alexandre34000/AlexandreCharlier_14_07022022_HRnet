@@ -1,0 +1,19 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+
+@import "./bases/bases";
+@import "./bases/fonts";
+
+@import "./components/header";
+@import "./components/createTable";
+@import "./components/modal";
+@import "./components/datePicker";
+@import "./components/calendar";
+@import "./components/title";
+@import "./components/tableRegister";
+
+@import "./pages/app";
+@import "./pages/home";
+@import "./pages/createEmpl";
+@import "./pages/listEmpl";
+@import "./pages/notFound";

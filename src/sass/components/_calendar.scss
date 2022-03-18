@@ -1,0 +1,35 @@
+.calendar-container {
+    width: 100%;
+    padding: 5px;
+}
+
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10px;
+}
+
+.calendar-th,
+.calendar-td {
+    width: 14.2857142%;
+    height: 25px;
+    border: 1px solid $border-color-greylight;
+    text-align: center;
+    background-color: $background-table;
+}
+
+.calendar-tbody {}
+
+.calendrier-hidden__day {
+    background-color: $background-table-greyligth;
+    color: $background-table-greyligth;
+}
+
+.calendrier-current__day {
+    background-color: $background-table;
+}
+
+.calendrier-current__day:hover {
+    background-color: black;
+    color: white;
+}

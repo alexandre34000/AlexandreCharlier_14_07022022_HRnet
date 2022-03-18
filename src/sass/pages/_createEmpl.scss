@@ -1,0 +1,47 @@
+.container-createEmpl {
+    width: 100%;
+    height: 100vh;
+}
+
+.createEmpl-title {
+    color: white;
+    padding: 15px 0;
+}
+
+.createEmpl-table__container {
+    margin: 0 30px;
+    background-color: $background-blue;
+    border-radius: 20px;
+    text-align: center;
+    padding: 0 20px 20px 20px;
+    height: 82vh;
+    overflow: auto;
+
+}
+
+.createEmpl-table__content {
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 0 15px;
+}
+
+.table-icon__calendar {
+    width: 20px;
+    height: 20px;
+    background-image: url('../../public/icons/calendar.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.createEmpl-datepicker {
+    display: none;
+    position: absolute;
+}
