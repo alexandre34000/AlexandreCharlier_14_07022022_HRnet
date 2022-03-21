@@ -1,6 +1,7 @@
 import usersConstantes from '../_constantes/usersConstantes';
-import {getUsersFetch, createUserFetch} from '../_services/service';
-import {mixer} from '../_helpers/mixer'
+import {createUserFetch} from '../_services/service';
+import bodyElements from '../data/dataMocks';
+
 
 const getUsersAction = (userObj) => ({
   type: usersConstantes.USERS_REQUEST,
@@ -16,15 +17,8 @@ const createUserAction =(userObj) =>({
  * Recovery of the registered user's profile
  * @returns Promise
  */
-export const getUsers = () => dispatch => {
-  getUsersFetch()
-    .then(data => {
-      if (data.results) {
-        let resultats = mixer(data.results)
-        dispatch(getUsersAction(resultats))
-      }
-    })
-    .catch((err) => { console.log(err) })   
+export const getUsers = () => dispatch => {  
+    dispatch(getUsersAction(bodyElements))
 }
 
 /**

@@ -14,10 +14,10 @@ function App() {
         <main>
           <h1 className="sr-only"> HRnet, application de gestion des ressources humaines</h1>
           <Switch>
-            <Redirect exact from="/" to="/Home" />
+            <Redirect exact from="/" to="/employee-create" />
             <Route path="/Home" component={Home} />
-            <Route path="/CreateEmpl" component={CreateEmpl} />
-            <Route path="/ListEmpl" component={ListEmpl} />
+            <Route path="/employee-create" component={CreateEmpl} />
+            <Route path="/employee-list" component={ListEmpl} />
             <Route path='*' component={NotFound} />
           </Switch>
         </main>

@@ -5,7 +5,8 @@ import Title from '../../components/Title';
 
 const Home = () => {
     const dispatch = useDispatch();
-
+    
+    /* eslint-disable */
     useEffect(()=>{
         dispatch(getUsers())
     },[]);
